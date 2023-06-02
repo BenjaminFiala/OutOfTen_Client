@@ -4,7 +4,7 @@ import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { AppComponent } from './app.component';
-import {RouterOutlet} from "@angular/router";
+import {RouterLink, RouterOutlet} from "@angular/router";
 import { AppRoutingModule} from "./auth&routing/app-routing/app-routing.module";
 import {HeaderComponent} from "./components/header/header.component";
 import {HomeComponent} from "./components/home/home.component";
@@ -24,13 +24,14 @@ import {SearchComponent} from "./components/search/search.component";
     ProductsComponent,
     SearchComponent
   ],
-  imports: [
-    BrowserModule,
-    RouterOutlet,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        RouterOutlet,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+        RouterLink
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
